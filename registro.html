@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <link rel="stylesheet" href="registro_diseno.css">
+  <script defer src="assets/js/app.js"></script>
+  <script defer src="registro_js.js"></script>
+</head>
+<body>
+    <div class="logo-image">
+        <img src="logo.png" alt="Thunder" width="800" height="800">
+    </div>
+  <div class="container">
+    <div class="form-card">
+      <h1>Registro</h1>
+      <form id="registro-form">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required>
+        </div>
+        <div class="form-group">
+            <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" required>
+        </div>
+        <div class="form-group">
+          <label for="apodo">Apodo</label>
+          <input type="text" id="apodo" name="apodo" required>
+        </div>
+        
+        <div class="terms-container">
+            <input type="checkbox" id="terms" name="terms" required height="20px" width="20px">
+            <label for="terms">Acepto los <a href="terminos.html">términos y condiciones</a></label>    
+        </div>
+        
+        <button type="submit" class="btn-submit">Registrarse</button>
+      </form>
+      <br>
+      <button type="submit" class="btn-submit">Iniciar sesión</button>
+      <div id="greeting" class="greeting"></div>
+    </div>
+  </div>
+</body>
+</html>

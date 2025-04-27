@@ -1,0 +1,107 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Contenedor principal del chat */
+  #chatbox {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Mensajes */
+  .msg {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+  
+  /* Mensajes del usuario */
+  .user {
+    background-color: #e0f7fa;
+    align-self: flex-end;
+    text-align: right;
+    color: #006064;
+  }
+  
+  /* Mensajes del bot */
+  .bot {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+    text-align: left;
+    color: #333;
+  }
+  
+  /* Indicador de "escribiendo" */
+  .bot::before {
+    content: "Bot está escribiendo...";
+    font-style: italic;
+    color: #888;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Formulario de entrada */
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Input de mensaje */
+  input {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus {
+    border-color: #4CAF50;
+  }
+  
+  /* Botón de envío */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Título */
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  

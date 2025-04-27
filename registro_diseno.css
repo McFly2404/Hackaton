@@ -1,0 +1,117 @@
+:root {
+    --bg-color: #4ebb7b;
+    --outside-bg-color: #ffd7b7; /* Color fuera del marco */
+    --text-color: #333333;
+    --primary-color: #000000;
+    --secondary-color: #f39c12;
+    --third-color: #000000;
+    --border-radius: 8px;
+    --font-family: 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--outside-bg-color); /* Fondo fuera del marco */
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.hero-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Esto coloca el logo detrás del contenido */
+    width: 200px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+    border: 8px solid #000000bb; /* Marco negro */
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.form-container {
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 24px;
+    font-size: 2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 4px var(--primary-color);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--secondary-color);
+}
+
+#greeting {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+/*marco general negro*/
+.terms-container {
+    display: flex;
+    align-items: center; /* Alinea el checkbox con el texto */
+    justify-content: center; /* Centra el texto */
+    gap: 10px; /* Agrega un pequeño espacio entre el checkbox y el texto */
+}
+
+input[type="checkbox"] {
+    margin-right: 10px; /* Ajusta el espacio entre el checkbox y el texto */
+}

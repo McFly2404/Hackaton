@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test OPD-SQS</title>
+    <script src="calcular-test.js" defer></script>
+    <script defer src="assets/js/app.js"></script>
+<style>
+    
+    /* General styling */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ffd7b7;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center; /* Centrado horizontal */
+        align-items: flex-start; /* Alineación al top */
+        height: 100vh;
+    }
+
+    .test-container {
+        background-color: #71d199;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        width: 100%;
+        max-width: 800px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .test-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .question {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fafafa;
+    }
+
+    .btn-submit {
+        background-color: #4CAF50;
+        color: white;
+        font-size: 18px;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 20px;
+    }
+
+    .btn-submit:hover {
+        background-color: #45a049;
+    }
+
+    .header-block {
+        background-color: #4CAF50; /* Color de fondo por defecto */
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%;
+        max-width: 300px; /* Limita el ancho máximo */
+        margin: 0 auto; /* Esto centra el bloque horizontalmente */
+    }
+    .logo-image {
+        text-align: center;
+        margin-bottom: 20px;
+    } 
+</style>
+</head>
+<body>
+
+<div class="test-container">
+    <div class="logo-image">
+        <img src="logo.png" alt="Thunder" width="200" height="200">
+    </div>
+    <div class="header-block" id="header-block">
+        <h1 id="titulo">Test OPD-SQS</h1>
+    </div>
+    <br>
+    <form id="test-form">
+        <!-- Aquí pondríamos varias preguntas tipo: -->
+        <label>A veces me siento como un extraño(a) conmigo mismo(a):</label><br>
+        <select name="pregunta1" required>
+            <option value="0">Nunca</option>
+            <option value="1">Rara vez</option>
+            <option value="2">A veces</option>
+            <option value="3">Frecuentemente</option>
+            <option value="4">Siempre</option>
+        </select><br><br>
+
+        <label>Cuando pienso mucho sobre mí mismo(a), tiendo a confundirme:</label><br>
+        <select name="pregunta2" required>
+            <option value="0">Nunca</option>
+            <option value="1">Rara vez</option>
+            <option value="2">A veces</option>
+            <option value="3">Frecuentemente</option>
+            <option value="4">Siempre</option>
+        </select><br><br>
+
+        <label>Puede resultar peligroso dejar que los demás se le acerquen a uno demasiado:</label><br>
+        <select name="pregunta3" required>
+            <option value="0">Nunca</option>
+            <option value="1">Rara vez</option>
+            <option value="2">A veces</option>
+            <option value="3">Frecuentemente</option>
+            <option value="4">Siempre</option>
+        </select><br><br>
+
+        <label>Muchas veces me es difícil darme a entender frente a los demás:</label><br>
+        <select name="pregunta4" required>
+            <option value="0">Nunca</option>
+            <option value="1">Rara vez</option>
+            <option value="2">A veces</option>
+            <option value="3">Frecuentemente</option>
+            <option value="4">Siempre</option>
+        </select><br><br>
+
+        <label>Muchas veces siento tal caos emocional en mi interior que ni siquiera podría describirlo:</label><br>
+        <select name="pregunta5" required>
+            <option value="0">Nunca</option>
+            <option value="1">Rara vez</option>
+            <option value="2">A veces</option>
+            <option value="3">Frecuentemente</option>
+            <option value="4">Siempre</option>
+        </select><br><br>
+
+        <label>A veces juzgo mal cómo mi conducta afecta a los demás:</label><br>
+        <select name="pregunta6" required>
+            <option value="0">Nunca</option>
+            <option value="1">Rara vez</option>
+            <option value="2">A veces</option>
+            <option value="3">Frecuentemente</option>
+            <option value="4">Siempre</option>
+        </select><br><br>
+        
+        <label>A menudo me siento observado y controlado cuando los otros saben mucho de mí:</label><br>
+        <select name="pregunta7" required>
+            <option value="0">Nunca</option>
+            <option value="1">Rara vez</option>
+            <option value="2">A veces</option>
+            <option value="3">Frecuentemente</option>
+            <option value="4">Siempre</option>
+        </select><br><br>
+
+        <label>Mis emociones son a veces tan intensas, que me asustan:</label><br>
+        <select name="pregunta8" required>
+            <option value="0">Nunca</option>
+            <option value="1">Rara vez</option>
+            <option value="2">A veces</option>
+            <option value="3">Frecuentemente</option>
+            <option value="4">Siempre</option>
+        </select><br><br>
+
+        <label>Me han dañado mucho por haberme equivocado respecto a una persona:</label><br>
+        <select name="pregunta9" required>
+            <option value="0">Nunca</option>
+            <option value="1">Rara vez</option>
+            <option value="2">A veces</option>
+            <option value="3">Frecuentemente</option>
+            <option value="4">Siempre</option>
+        </select><br><br>
+
+        <label>Me resulta difícil establecer contacto con otras personas:</label><br>
+        <select name="pregunta10" required>
+            <option value="0">Nunca</option>
+            <option value="1">Rara vez</option>
+            <option value="2">A veces</option>
+            <option value="3">Frecuentemente</option>
+            <option value="4">Siempre</option>
+        </select><br><br>
+
+        <label>No tengo una buena autoestima:</label><br>
+        <select name="pregunta11" required>
+            <option value="0">Nunca</option>
+            <option value="1">Rara vez</option>
+            <option value="2">A veces</option>
+            <option value="3">Frecuentemente</option>
+            <option value="4">Siempre</option>
+        </select><br><br>
+
+        <label>Mi experiencia es que cuando se confía demasiado en las personas, uno puede tener sorpresas desagradables:</label><br>
+        <select name="pregunta12" required>
+            <option value="0">Nunca</option>
+            <option value="1">Rara vez</option>
+            <option value="2">A veces</option>
+            <option value="3">Frecuentemente</option>
+            <option value="4">Siempre</option>
+        </select><br><br>
+
+        <button type="submit">Enviar respuestas</button>
+    </form>
+</body>
+</html>
+    

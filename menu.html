@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menú Principal</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/app.js"></script>
+  <style>
+    /* Estilo general */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffd7b7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* HEADER */
+    .main-header {
+      width: 100%;
+      background-color: #4CAF50;
+      padding: 15px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .hero-image img {
+      width: 300px;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 20px;
+    }
+
+    .hero-content h1 {
+      color: #333;
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+      max-width: 800px;
+    }
+
+    .btn-primary {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #45a049;
+    }
+
+    /* Navbar styling */
+.navbar {
+  width: 100%;
+  background-color: #4CAF50;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  display: flex;                /* Alínea los elementos de la lista horizontalmente */
+  justify-content: center;      /* Centra los elementos dentro de la barra */
+  list-style: none;             /* Elimina los puntos de las listas */
+  margin: 0;                    /* Elimina márgenes */
+  padding: 0;                   /* Elimina el padding */
+}
+
+.navbar li {
+  margin: 0 20px;               /* Añade espacio entre los elementos */
+}
+
+.navbar a {
+  text-decoration: none;        /* Elimina el subrayado del enlace */
+  color: white;                 /* Color del texto */
+  font-size: 18px;              /* Tamaño del texto */
+  font-weight: bold;            /* Negrita para los enlaces */
+  transition: color 0.3s ease;  /* Transición para cambio de color */
+}
+
+.navbar a:hover {
+  color: #ffeb3b;               /* Cambia el color del texto cuando pasa el mouse */
+}
+  </style>
+</head>
+<body>
+
+  <!-- HEADER + NAV -->
+  <header class="main-header">
+    <nav class="navbar">
+      <ul>
+        <li><a href="chatbot.html">Thunder</a></li>
+        <li><a href="soluciones.html">Soluciones</a></li>
+        <li><a href="apoyo.html">Acompañamiento</a></li>
+        <li><a href="sueno.html">Registro de sueño</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-image">
+      <img src="thunder.png" alt="Thunder">
+    </div>
+    <div class="hero-content">
+      <h1>Conoce a Thunder</h1>
+      <p>
+        Conversa con Thunder, nuestro acompañante emocional diseñado para brindarte apoyo y orientación en tu camino hacia el bienestar. Thunder está aquí para escucharte y ayudarte a encontrar soluciones a tus inquietudes.
+      </p>
+      <a href="chatbot.html" class="btn-primary">Chatea con Thunder</a>
+    </div>
+  </section>
+
+</body>
+</html>

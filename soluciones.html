@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Soluciones para el Estrés</title>
+  <script defer src="backend_solucion.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/app.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffd7b7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center; /* Centrado horizontal */
+      align-items: center; /* Centrado vertical */
+      height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .solution {
+      background-color: #fca35f;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      width: 80%;
+      max-width: 600px;
+      text-align: center;
+      display: flex;
+      justify-content: center; /* Centrado horizontal de los botones */
+      gap: 10px; /* Espacio entre los botones */
+    }
+
+    .solution h2 {
+      font-size: 20px;
+      color: #0d530f;
+    }
+
+    .solution p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .accept, .reject {
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .accept:hover {
+      background-color: #45a0497e;
+    }
+
+    .reject {
+      background-color: #f44336;
+    }
+
+    .reject:hover {
+      background-color: #e5383586;
+    }
+
+    #mensaje {
+      text-align: center;
+      font-size: 18px;
+      color: #333;
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #2196F3;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      display: block;
+      width: 200px;
+      margin: 20px auto;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1976D2;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h1>Soluciones para el Estrés</h1>
+
+    <div class="solution" data-id="1">
+      <h2>Solución 1: Caminata en la Naturaleza</h2>
+      <p>Dar una caminata de 15 minutos en un parque o entorno natural para reducir el estrés y despejar la mente.</p>
+      <button class="reject">Rechazar</button>
+      <button class="accept">Aceptar</button>
+    </div>
+
+    <div class="solution" data-id="2">
+      <h2>Solución 2: Respiración Profunda</h2>
+      <p>Practicar 5 minutos de respiración diafragmática: inhalar contando hasta 4, retener 2 y exhalar contando hasta 6.</p>
+      <button class="reject">Rechazar</button>
+      <button class="accept">Aceptar</button>
+    </div>
+
+    <div class="solution" data-id="3">
+      <h2>Solución 3: Pausa de Estiramiento</h2>
+      <p>Realizar una serie de estiramientos suaves durante 5–10 minutos para relajar la tensión muscular.</p>
+      <button class="reject">Rechazar</button>
+      <button class="accept">Aceptar</button>
+    </div>
+
+    <div id="mensaje"></div>
+
+    <button onclick="location.href='menu.html'">Volver al Menú</button>   
+  </div>
+
+</body>
+</html>
